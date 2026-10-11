@@ -1,0 +1,35 @@
+:root {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #fff;
+  background: #18191b;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 1440px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-placeholder {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
