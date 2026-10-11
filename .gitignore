@@ -5,3 +5,4 @@
 artifacts/
 /.idea/
 *.log
+/pnpm-lock.yaml
