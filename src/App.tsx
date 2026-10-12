@@ -26,11 +26,9 @@ export default function App() {
   }
 
   const toggleLike = (id: string) => {
-    setLiked((current) => {
-      const nextLiked = !current[id]
-      setLikeCounts((counts) => ({ ...counts, [id]: counts[id] + (nextLiked ? 1 : -1) }))
-      return { ...current, [id]: nextLiked }
-    })
+    const nextLiked = !liked[id]
+    setLiked((current) => ({ ...current, [id]: nextLiked }))
+    setLikeCounts((counts) => ({ ...counts, [id]: counts[id] + (nextLiked ? 1 : -1) }))
   }
 
   return (

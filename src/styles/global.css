@@ -237,6 +237,11 @@ button {
   background: var(--accent-soft);
 }
 
+.nav-item:not(.nav-item--active):hover {
+  color: var(--accent);
+  background: rgba(153, 204, 255, 0.08);
+}
+
 .nav-item--active::before {
   position: absolute;
   top: 14px;
@@ -393,6 +398,11 @@ button {
   background: rgba(153, 204, 255, 0.12);
 }
 
+.follow-button:not(.follow-button--active):hover {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #b8deff;
+}
+
 .article-card__copy {
   width: 631px;
   height: 104px;
@@ -454,8 +464,225 @@ button {
   background: rgba(153, 204, 255, 0.16);
 }
 
+.engagement-button:not(.engagement-button--active):hover {
+  color: var(--accent);
+  background: rgba(153, 204, 255, 0.08);
+}
+
 button:focus-visible,
 input:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* 中等桌面保留导航与内容列，辅助发布卡片由页头入口代替。 */
+@media (max-width: 1279px) {
+  .page-shell,
+  .site-header {
+    width: 923px;
+  }
+
+  .site-header__content {
+    width: 869px;
+  }
+
+  .home-grid {
+    grid-template-columns: 225px 681px;
+  }
+
+  .publish-panel {
+    display: none;
+  }
+}
+
+/* 平板与手机使用单列内容，导航改为可横向操作的紧凑栏。 */
+@media (max-width: 959px) {
+  .community-page {
+    min-height: 100vh;
+  }
+
+  .page-shell,
+  .site-header {
+    width: min(681px, calc(100vw - 32px));
+  }
+
+  .site-header__content {
+    width: 100%;
+  }
+
+  .site-header__title {
+    width: auto;
+    font-size: 28px;
+  }
+
+  .site-header__tools {
+    width: auto;
+    min-width: 0;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .search-box {
+    width: min(393px, calc(100% - 120px));
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .site-header__actions {
+    margin-left: 6px;
+  }
+
+  .home-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .sidebar {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    padding: 0 12px;
+    align-items: center;
+  }
+
+  .sidebar__title {
+    flex: 0 0 80px;
+    margin-left: 0;
+  }
+
+  .sidebar__nav {
+    display: flex;
+    min-width: 0;
+    padding-top: 0;
+    flex: 1;
+  }
+
+  .nav-item {
+    width: auto;
+    min-width: 0;
+    margin-left: 0;
+    padding: 9px 8px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .content-column,
+  .hero-banner,
+  .article-feed,
+  .article-card,
+  .article-card__author-row,
+  .article-card__copy,
+  .article-card__actions,
+  .article-card__cover {
+    width: 100%;
+  }
+
+  .hero-banner {
+    height: auto;
+    aspect-ratio: 681 / 229;
+  }
+
+  .article-feed {
+    height: auto;
+  }
+
+  .article-card {
+    height: auto;
+  }
+
+  .article-card__author {
+    width: calc(100% - 72px);
+    min-width: 0;
+  }
+
+  .article-card__author div {
+    width: calc(100% - 46px);
+    min-width: 0;
+  }
+
+  .article-card__cover {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .article-feed__divider {
+    width: calc(100% - 48px);
+  }
+}
+
+@media (max-width: 719px) {
+  .page-shell {
+    padding-top: 16px;
+  }
+
+  .site-header {
+    height: auto;
+    padding: 16px;
+  }
+
+  .site-header__content {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .site-header__title {
+    width: 100%;
+  }
+
+  .site-header__tools {
+    width: 100%;
+    height: 41px;
+    margin-top: 12px;
+    flex: 0 0 100%;
+  }
+
+  .search-box {
+    width: calc(100% - 112px);
+    margin: 0;
+  }
+
+  .site-header__actions {
+    margin-left: 12px;
+  }
+
+  .home-grid {
+    margin-top: 16px;
+  }
+
+  .article-card {
+    padding: 20px 16px;
+  }
+
+  .article-card__copy h2 {
+    height: 48px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .article-card__copy {
+    height: 100px;
+  }
+
+  .article-feed__divider {
+    width: calc(100% - 32px);
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 519px) {
+  .sidebar__title {
+    display: none;
+  }
+
+  .nav-item {
+    padding-inline: 4px;
+  }
+
+  .nav-item__icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
 }
