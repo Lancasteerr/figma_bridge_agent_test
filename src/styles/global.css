@@ -36,6 +36,16 @@ button {
   cursor: pointer;
 }
 
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgba(152, 204, 255, 0.8);
+  outline-offset: 2px;
+}
+
+button:active {
+  filter: brightness(0.9);
+}
+
 .app-shell {
   position: relative;
   width: 1440px;
@@ -162,6 +172,11 @@ button {
   height: 17.84px;
 }
 
+.round-action:hover {
+  color: #fff;
+  background: rgba(152, 204, 255, 0.08);
+}
+
 .site-header__avatar {
   width: 40px;
   height: 40px;
@@ -237,6 +252,11 @@ button {
 .sidebar__item--active {
   color: #98ccff;
   background: rgba(152, 204, 255, 0.15);
+}
+
+.sidebar__item:not(.sidebar__item--active):hover {
+  color: #8a8a8a;
+  background: rgba(152, 204, 255, 0.08);
 }
 
 .sidebar__item--active::before {
@@ -331,6 +351,14 @@ button {
 .publish-card__action-icon {
   width: 48px;
   height: 48px;
+  color: #fff;
+}
+
+.publish-card__action:hover {
+  color: #98ccff;
+}
+
+.publish-card__action:hover .publish-card__action-icon {
   color: #fff;
 }
 
@@ -454,6 +482,15 @@ button {
   background: rgba(152, 204, 255, 0.12);
 }
 
+.follow-button:not(.follow-button--following):hover {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #b8deff;
+}
+
+.follow-button--following:hover {
+  background: rgba(152, 204, 255, 0.18);
+}
+
 .article-card__copy {
   display: flex;
   width: 631px;
@@ -531,6 +568,11 @@ button {
   border: 1px solid rgba(152, 204, 255, 0.4);
   color: #98ccff;
   background: rgba(152, 204, 255, 0.16);
+}
+
+.reaction-button:not(.reaction-button--active):hover {
+  color: #757575;
+  background: rgba(152, 204, 255, 0.08);
 }
 
 .reaction-button__icon {

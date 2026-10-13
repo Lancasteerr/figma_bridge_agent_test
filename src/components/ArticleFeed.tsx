@@ -1,7 +1,7 @@
 import type { Article } from '../data/articles'
 import { ArticleCard } from './ArticleCard'
 
-interface ArticleState {
+export interface ArticleViewState {
   following: boolean
   liked: boolean
   likeLabel: string
@@ -9,7 +9,7 @@ interface ArticleState {
 
 interface ArticleFeedProps {
   articles: Article[]
-  states: Record<string, ArticleState>
+  states: Record<string, ArticleViewState>
   onToggleFollow: (articleId: string) => void
   onToggleLike: (articleId: string) => void
 }
