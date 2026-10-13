@@ -1,0 +1,39 @@
+:root {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #fff;
+  background: #0d0d0f;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 1440px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+.app-shell {
+  width: 1440px;
+  min-height: 1668px;
+  margin: 0 auto;
+}
