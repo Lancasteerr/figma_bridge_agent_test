@@ -1,5 +1,7 @@
+import { HomePage } from './pages/HomePage'
+
 function App() {
-  return <main className="app-shell">Easy Community</main>
+  return <HomePage />
 }
 
 export default App
