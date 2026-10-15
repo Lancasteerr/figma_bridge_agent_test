@@ -1,11 +1,17 @@
 import avatar from '../../assets/images/avatar.jpg'
 import commentIcon from '../../assets/icons/comment.svg'
-import likeActiveIcon from '../../assets/icons/like-active.svg'
 import likeDefaultIcon from '../../assets/icons/like-default.svg'
 import type { ArticleCardProps } from '../../types/community'
+import { IconMask } from '../IconMask/IconMask'
 import styles from './ArticleCard.module.css'
 
-export function ArticleCard({ article, followed, liked }: ArticleCardProps) {
+export function ArticleCard({
+  article,
+  followed,
+  liked,
+  onToggleFollow,
+  onToggleLike,
+}: ArticleCardProps) {
   return (
     <article className={styles.card}>
       <header className={styles.authorRow}>
@@ -21,6 +27,7 @@ export function ArticleCard({ article, followed, liked }: ArticleCardProps) {
           aria-label={`${followed ? '取消关注' : '关注'} ${article.author}`}
           aria-pressed={followed}
           className={`${styles.followButton} ${followed ? styles.following : ''}`}
+          onClick={() => onToggleFollow(article.id)}
           type="button"
         >
           {followed ? '已关注' : '+ 关注'}
@@ -41,13 +48,14 @@ export function ArticleCard({ article, followed, liked }: ArticleCardProps) {
           aria-label={`${liked ? '取消点赞' : '点赞'} ${article.title}`}
           aria-pressed={liked}
           className={`${styles.interactionButton} ${liked ? styles.liked : ''}`}
+          onClick={() => onToggleLike(article.id)}
           type="button"
         >
-          <img aria-hidden="true" src={liked ? likeActiveIcon : likeDefaultIcon} />
+          <IconMask source={likeDefaultIcon} size={20} />
           <span>{article.likeCount}</span>
         </button>
         <button aria-label={`评论 ${article.title}`} className={styles.interactionButton} type="button">
-          <img aria-hidden="true" src={commentIcon} />
+          <IconMask source={commentIcon} size={20} />
           <span>{article.commentCount}</span>
         </button>
       </footer>

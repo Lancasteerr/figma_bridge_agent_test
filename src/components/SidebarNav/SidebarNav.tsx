@@ -5,9 +5,10 @@ import styles from './SidebarNav.module.css'
 interface SidebarNavProps {
   items: NavItem[]
   activeId: NavigationId
+  onSelect: (id: NavigationId) => void
 }
 
-export function SidebarNav({ items, activeId }: SidebarNavProps) {
+export function SidebarNav({ items, activeId, onSelect }: SidebarNavProps) {
   return (
     <aside className={styles.sidebar} aria-label="首页频道导航">
       <div className={styles.headingBlock}>
@@ -26,6 +27,7 @@ export function SidebarNav({ items, activeId }: SidebarNavProps) {
               aria-current={active ? 'page' : undefined}
               className={`${styles.navItem} ${active ? styles.active : ''}`}
               key={item.id}
+              onClick={() => onSelect(item.id)}
               type="button"
             >
               {active && <span aria-hidden="true" className={styles.activeLine} />}

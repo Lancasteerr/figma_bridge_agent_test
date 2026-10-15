@@ -23,4 +23,6 @@ export interface ArticleCardProps {
   article: Article
   followed: boolean
   liked: boolean
+  onToggleFollow: (articleId: string) => void
+  onToggleLike: (articleId: string) => void
 }
