@@ -1,8 +1,0 @@
-/AGENTS.md
-/node_modules/
-/dist/
-/coverage/
-artifacts/
-/.idea/
-*.log
-/pnpm-lock.yaml
