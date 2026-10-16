@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import avatar from '../assets/images/avatar.jpg'
 import commentIcon from '../assets/icons/comment.svg'
 import likeDefaultIcon from '../assets/icons/like-default.svg'
 import likeLikedIcon from '../assets/icons/like-liked.svg'
-import type { Article } from '../types/community'
+import type { Article, ArticleInteractionState } from '../types/community'
 import { formatCompactCount } from '../utils/formatCount'
 import styles from './ArticleCard.module.css'
 
@@ -11,6 +12,24 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ article }: ArticleCardProps) {
+  const [interaction, setInteraction] = useState<ArticleInteractionState>({
+    following: article.initialFollowing,
+    liked: article.initialLiked,
+    likeCount: article.likeCount,
+  })
+
+  const toggleFollowing = () => {
+    setInteraction((current) => ({ ...current, following: !current.following }))
+  }
+
+  const toggleLiked = () => {
+    setInteraction((current) => ({
+      ...current,
+      liked: !current.liked,
+      likeCount: current.likeCount + (current.liked ? -1 : 1),
+    }))
+  }
+
   return (
     <article className={styles.card}>
       <header className={styles.authorRow}>
@@ -23,10 +42,11 @@ export function ArticleCard({ article }: ArticleCardProps) {
         </div>
         <button
           type="button"
-          className={`${styles.followButton} ${article.initialFollowing ? styles.following : ''}`}
-          aria-pressed={article.initialFollowing}
+          className={`${styles.followButton} ${interaction.following ? styles.following : ''}`}
+          aria-pressed={interaction.following}
+          onClick={toggleFollowing}
         >
-          {article.initialFollowing ? '已关注' : '+ 关注'}
+          {interaction.following ? '已关注' : '+ 关注'}
         </button>
       </header>
 
@@ -42,14 +62,15 @@ export function ArticleCard({ article }: ArticleCardProps) {
       <footer className={styles.engagement}>
         <button
           type="button"
-          className={`${styles.engagementButton} ${article.initialLiked ? styles.liked : ''}`}
-          aria-label={`${article.initialLiked ? '取消点赞' : '点赞'}，当前 ${formatCompactCount(article.likeCount)}`}
-          aria-pressed={article.initialLiked}
+          className={`${styles.engagementButton} ${interaction.liked ? styles.liked : ''}`}
+          aria-label={`${interaction.liked ? '取消点赞' : '点赞'}，当前 ${formatCompactCount(interaction.likeCount)}`}
+          aria-pressed={interaction.liked}
+          onClick={toggleLiked}
         >
           <span className={styles.engagementIcon}>
-            <img src={article.initialLiked ? likeLikedIcon : likeDefaultIcon} alt="" aria-hidden="true" />
+            <img src={interaction.liked ? likeLikedIcon : likeDefaultIcon} alt="" aria-hidden="true" />
           </span>
-          <span>{formatCompactCount(article.likeCount)}</span>
+          <span>{formatCompactCount(interaction.likeCount)}</span>
         </button>
         <button type="button" className={styles.engagementButton} aria-label={`评论，当前 ${article.commentCount}`}>
           <span className={styles.engagementIcon}>

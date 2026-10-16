@@ -63,6 +63,14 @@
   background: rgba(152, 204, 255, 0.15);
 }
 
+.navItem:not(.active) .iconBox img {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(7%) hue-rotate(185deg) brightness(96%) contrast(89%);
+}
+
+.navItem.active .iconBox img {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(18%) saturate(1132%) hue-rotate(177deg) brightness(103%) contrast(102%);
+}
+
 .navItem.active::before {
   position: absolute;
   top: 14px;

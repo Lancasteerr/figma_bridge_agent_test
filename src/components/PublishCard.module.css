@@ -81,3 +81,8 @@
   border-radius: 8px;
   outline: 1px solid var(--brand);
 }
+
+.action:hover {
+  border-radius: 8px;
+  background: rgba(152, 204, 255, 0.08);
+}
