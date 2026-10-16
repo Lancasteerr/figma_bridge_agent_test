@@ -1,8 +1,0 @@
-.icon {
-  display: block;
-  width: var(--icon-size);
-  height: var(--icon-size);
-  flex: 0 0 var(--icon-size);
-  background: currentColor;
-  mask: var(--icon-source) center / contain no-repeat;
-}
