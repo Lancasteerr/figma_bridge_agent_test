@@ -1,0 +1,83 @@
+.card {
+  position: absolute;
+  top: 167px;
+  left: 1047px;
+  width: 287px;
+  height: 182px;
+  border-radius: 12px;
+  background: var(--surface-overlay);
+}
+
+.heading {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  display: flex;
+  width: 111px;
+  height: 25px;
+  align-items: baseline;
+  gap: 2px;
+  border-bottom: 2px solid var(--brand);
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.english {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.actions {
+  position: absolute;
+  top: 69px;
+  left: 33px;
+  display: flex;
+  height: 65px;
+  align-items: center;
+  gap: 33px;
+}
+
+.action {
+  display: flex;
+  height: 65px;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.iconBox {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+}
+
+.editIcon {
+  width: 40.243px;
+  height: 40.243px;
+}
+
+.manageIcon {
+  width: 40px;
+  height: 32px;
+}
+
+.action:focus-visible {
+  border-radius: 8px;
+  outline: 1px solid var(--brand);
+}
