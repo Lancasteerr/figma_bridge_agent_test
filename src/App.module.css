@@ -4,7 +4,7 @@
   min-width: 1440px;
   height: 100vh;
   overflow: hidden;
-  background: #111;
+  background: #111 url('./assets/figma/page-background.png') center center / cover fixed no-repeat;
 }
 
 .stage {

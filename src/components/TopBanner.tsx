@@ -1,4 +1,5 @@
 import styles from './components.module.css'
+import avatar from '../assets/figma/avatar.jpg'
 
 interface TopBannerProps {
   value: string
@@ -17,12 +18,14 @@ export function TopBanner({ value, onChange }: TopBannerProps) {
             onChange={(event) => onChange(event.target.value)}
             placeholder="搜索你感兴趣的内容"
           />
-          <span aria-hidden="true">⌕</span>
+          <span className={`${styles.iconMask} ${styles.searchIcon}`} aria-hidden="true" />
         </label>
         <button className={styles.headerAction} type="button" aria-label="发布中心">
-          ✎
+          <span className={`${styles.iconMask} ${styles.headerEditIcon}`} aria-hidden="true" />
         </button>
-        <button className={styles.avatarPlaceholder} type="button" aria-label="用户头像" />
+        <button className={styles.avatarButton} type="button" aria-label="用户头像">
+          <img src={avatar} alt="" />
+        </button>
       </div>
     </header>
   )

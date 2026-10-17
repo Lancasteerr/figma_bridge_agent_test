@@ -8,8 +8,14 @@ export function PublishCard() {
         <small>POST</small>
       </div>
       <div className={styles.publishActions}>
-        <button type="button"><b aria-hidden="true">✎</b><span>发图文</span></button>
-        <button type="button"><b aria-hidden="true">▱</b><span>管理作品</span></button>
+        <button type="button">
+          <span className={`${styles.iconMask} ${styles.publishIcon}`} aria-hidden="true" />
+          <span>发图文</span>
+        </button>
+        <button type="button">
+          <span className={`${styles.iconMask} ${styles.inboxIcon}`} aria-hidden="true" />
+          <span>管理作品</span>
+        </button>
       </div>
     </aside>
   )

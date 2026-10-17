@@ -6,10 +6,10 @@ interface SidebarNavProps {
   onChange: (key: NavKey) => void
 }
 
-const navItems: Array<{ key: NavKey; label: string; icon: string }> = [
-  { key: 'recommended', label: '推荐', icon: '›_' },
-  { key: 'popular', label: '热门', icon: '↗' },
-  { key: 'following', label: '关注', icon: '◉' },
+const navItems: Array<{ key: NavKey; label: string; icon: 'terminalIcon' | 'trendingIcon' | 'compassIcon' }> = [
+  { key: 'recommended', label: '推荐', icon: 'terminalIcon' },
+  { key: 'popular', label: '热门', icon: 'trendingIcon' },
+  { key: 'following', label: '关注', icon: 'compassIcon' },
 ]
 
 export function SidebarNav({ active, onChange }: SidebarNavProps) {
@@ -29,8 +29,8 @@ export function SidebarNav({ active, onChange }: SidebarNavProps) {
             onClick={() => onChange(item.key)}
             key={item.key}
           >
-            <span aria-hidden="true">{item.icon}</span>
-            {item.label}
+            <span className={`${styles.iconMask} ${styles.navIcon} ${styles[item.icon]}`} aria-hidden="true" />
+            <span>{item.label}</span>
           </button>
         ))}
       </nav>

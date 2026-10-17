@@ -1,4 +1,5 @@
 import type { Article } from '../types/community'
+import heroImage from '../assets/figma/home-hero.png'
 import { ArticleCard } from './ArticleCard'
 import styles from './components.module.css'
 
@@ -11,7 +12,7 @@ interface CenterFeedProps {
 export function CenterFeed({ articles, onToggleFollow, onToggleLike }: CenterFeedProps) {
   return (
     <section className={styles.centerScroller} aria-label="社区文章流">
-      <div className={styles.heroPlaceholder} aria-label="首页横图" />
+      <img className={styles.heroImage} src={heroImage} alt="动漫风格的车内场景横图" />
       <div className={styles.articleStream}>
         {articles.map((article, index) => (
           <ArticleCard

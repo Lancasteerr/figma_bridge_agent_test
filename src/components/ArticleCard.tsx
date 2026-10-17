@@ -2,6 +2,7 @@ import type { PropsWithChildren } from 'react'
 import { formatCount } from '../data/articles'
 import type { Article } from '../types/community'
 import styles from './components.module.css'
+import avatar from '../assets/figma/avatar.jpg'
 
 interface ArticleCardProps extends PropsWithChildren {
   article: Article
@@ -15,7 +16,7 @@ export function ArticleCard({ article, onToggleFollow, onToggleLike, children }:
       <div className={styles.articleInner}>
         <header className={styles.authorRow}>
           <div className={styles.authorInfo}>
-            <span className={styles.smallAvatar} />
+            <img className={styles.smallAvatar} src={avatar} alt="" />
             <span><strong>{article.author}</strong><small>{article.meta}</small></span>
           </div>
           <button
@@ -32,7 +33,9 @@ export function ArticleCard({ article, onToggleFollow, onToggleLike, children }:
           <h2>{article.title}</h2>
           <p>{article.summary}</p>
         </div>
-        <div className={styles.coverPlaceholder} />
+        <div className={styles.coverFrame}>
+          <img src={article.cover} alt="" />
+        </div>
         <footer className={styles.engagementRow}>
           <button
             className={styles.engagementButton}
@@ -42,10 +45,12 @@ export function ArticleCard({ article, onToggleFollow, onToggleLike, children }:
             aria-pressed={article.liked}
             onClick={() => onToggleLike(article.id)}
           >
-            <span aria-hidden="true">♡</span>{formatCount(article.likes)}
+            <span className={`${styles.iconMask} ${styles.likeIcon}`} aria-hidden="true" />
+            {formatCount(article.likes)}
           </button>
           <button className={styles.engagementButton} type="button" aria-label={`评论，当前 ${article.comments}`}>
-            <span aria-hidden="true">▣</span>{article.comments}
+            <span className={`${styles.iconMask} ${styles.commentIcon}`} aria-hidden="true" />
+            {article.comments}
           </button>
         </footer>
       </div>
