@@ -4,7 +4,7 @@
   <strong>中文</strong> · <a href="./README.en-US.md">English</a>
 </p>
 
-这是一个使用 [figma-local-agent](plugin://figma-local-agent@figma-bridge-marketplace) 完成的 Figma 设计稿到前端代码实践项目。Coding Agent 读取当前 Figma 页面中选中的设计范围，并使用 React、TypeScript 与 Vite 完成 **Easy Community** 桌面端社区首页还原。
+这是一个使用 [figma-local-agent](https://github.com/Lancasteerr/figma_bridge_agent) 完成的 Figma 设计稿到前端代码实践项目。Coding Agent 读取当前 Figma 页面中选中的设计范围，并使用 React、TypeScript 与 Vite 完成 **Easy Community** 桌面端社区首页还原。
 
 本仓库重点展示设计稿落地后的视觉效果、可复用组件结构与轻量前端交互，不包含后端服务。
 

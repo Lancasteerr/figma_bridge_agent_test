@@ -4,7 +4,7 @@
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-This repository is a Figma-to-code practice project built with [figma-local-agent](plugin://figma-local-agent@figma-bridge-marketplace). A Coding Agent reads the selected design scope on the current Figma page and recreates the desktop homepage of **Easy Community** with React, TypeScript, and Vite.
+This repository is a Figma-to-code practice project built with [figma-local-agent](https://github.com/Lancasteerr/figma_bridge_agent). A Coding Agent reads the selected design scope on the current Figma page and recreates the desktop homepage of **Easy Community** with React, TypeScript, and Vite.
 
 The project focuses on visual reproduction, reusable component structure, and lightweight frontend interactions. It does not include a backend service.
 
@@ -12,7 +12,7 @@ The project focuses on visual reproduction, reusable component structure, and li
 
 The original prompt used for this project is preserved below:
 
-> 使用React ”像素级“复刻现在figma设计稿所选的页面 [@figma-local-agent](plugin://figma-local-agent@figma-bridge-marketplace) 遇到交互问题（滚动，点击，选中变化等）和我确认实现
+> Use React to recreate the currently selected page in the Figma design with **pixel-perfect accuracy**.[@figma-local-agent](plugin://figma-local-agent@figma-bridge-marketplace)  If you encounter any ambiguities regarding interactions (such as scrolling, clicking, selection state changes, etc.), confirm the expected behavior with me before implementing them.
 
 English translation:
 
