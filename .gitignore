@@ -6,3 +6,6 @@ artifacts/
 /.idea/
 *.log
 /pnpm-lock.yaml
+/.vite/
+/playwright-report/
+/test-results/

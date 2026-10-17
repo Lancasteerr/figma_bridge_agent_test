@@ -1,0 +1,33 @@
+:root {
+  font-family: 'Noto Sans SC Variable', 'Noto Sans SC', sans-serif;
+  color: #ffffff;
+  background: #171719;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 1440px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
