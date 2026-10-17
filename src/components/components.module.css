@@ -240,6 +240,7 @@
 }
 
 .centerScroller {
+  /* 页面本身不纵向滚动，中间列独立承载长内容。 */
   position: absolute;
   top: 167px;
   left: 349px;
@@ -463,6 +464,7 @@
 }
 
 .iconMask {
+  /* Figma 导出的 SVG 作为遮罩，保证轮廓精确且允许状态色变化。 */
   display: inline-block;
   background-color: currentColor;
   -webkit-mask-position: center;

@@ -6,6 +6,7 @@ interface TopBannerProps {
   onChange: (value: string) => void
 }
 
+// 顶部区域保持 Figma 固定几何，仅搜索框维护可编辑的本地值。
 export function TopBanner({ value, onChange }: TopBannerProps) {
   return (
     <header className={styles.topBanner}>

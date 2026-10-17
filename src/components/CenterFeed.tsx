@@ -9,6 +9,7 @@ interface CenterFeedProps {
   onToggleLike: (id: string) => void
 }
 
+// 横图和文章流共用这一滚动容器，左右区域不会随内容移动。
 export function CenterFeed({ articles, onToggleFollow, onToggleLike }: CenterFeedProps) {
   return (
     <section className={styles.centerScroller} aria-label="社区文章流">

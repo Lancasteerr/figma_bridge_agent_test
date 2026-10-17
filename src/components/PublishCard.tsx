@@ -1,5 +1,6 @@
 import styles from './components.module.css'
 
+// 发布入口按约定只提供可访问按钮和视觉反馈，不进行页面跳转。
 export function PublishCard() {
   return (
     <aside className={styles.publishCard}>

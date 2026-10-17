@@ -10,6 +10,7 @@ interface ArticleCardProps extends PropsWithChildren {
   onToggleLike: (id: string) => void
 }
 
+// 同一组件覆盖默认、已关注和已点赞状态，尺寸始终保持设计稿的 610px。
 export function ArticleCard({ article, onToggleFollow, onToggleLike, children }: ArticleCardProps) {
   return (
     <article className={styles.articleCard} data-state={article.liked ? 'liked' : 'default'}>

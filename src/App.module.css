@@ -7,6 +7,7 @@
   background: #111 url('./assets/figma/page-background.png') center center / cover fixed no-repeat;
 }
 
+/* 舞台固定为 Figma 的 1440px 基准，宽屏居中、窄屏保持原始三栏关系。 */
 .stage {
   position: relative;
   width: 1440px;

@@ -29,6 +29,7 @@ export const initialArticles: Article[] = [
   },
 ]
 
+// 计数以整数保存，展示时再按设计稿规则缩写为 k。
 export function formatCount(count: number) {
   if (count < 1000) return String(count)
   return `${(count / 1000).toFixed(1).replace(/\.0$/, '')}k`

@@ -12,6 +12,7 @@ const navItems: Array<{ key: NavKey; label: string; icon: 'terminalIcon' | 'tren
   { key: 'following', label: '关注', icon: 'compassIcon' },
 ]
 
+// 分类按钮只移动选中高光，不替换文章或横图内容。
 export function SidebarNav({ active, onChange }: SidebarNavProps) {
   return (
     <aside className={styles.sidebar}>

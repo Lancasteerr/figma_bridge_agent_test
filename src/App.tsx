@@ -12,6 +12,7 @@ function App() {
   const [searchValue, setSearchValue] = useState('')
   const [articles, setArticles] = useState<Article[]>(initialArticles)
 
+  // 所有交互只更新当前内存中的文章，不产生网络请求或持久化。
   const updateArticle = (id: string, update: (article: Article) => Article) => {
     setArticles((items) => items.map((article) => (article.id === id ? update(article) : article)))
   }
