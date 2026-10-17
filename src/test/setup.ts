@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest'
+import { cleanup } from '@testing-library/react'
+import { afterEach } from 'vitest'
 
-// 清理 JSDOM 中可能残留的滚动位置，保证布局测试互不影响。
-afterEach(() => {
-  window.scrollTo(0, 0)
-})
+// Vitest 未启用全局 API，因此显式清理每个测试挂载的 React 树。
+afterEach(() => cleanup())

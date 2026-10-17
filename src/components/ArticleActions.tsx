@@ -17,7 +17,7 @@ export function ArticleActions({ liked, likeCount, commentCount, onToggleLike }:
   return (
     <div className={styles.actions}>
       <button
-        className={`${styles.actionButton} ${styles.likeButton} ${liked ? styles.liked : ''}`}
+        className={`${styles.actionButton} ${liked ? styles.liked : ''}`}
         type="button"
         aria-label={liked ? `取消点赞，当前 ${likeCount}` : `点赞，当前 ${likeCount}`}
         aria-pressed={liked}
@@ -29,7 +29,7 @@ export function ArticleActions({ liked, likeCount, commentCount, onToggleLike }:
         </span>
         <span>{likeCount}</span>
       </button>
-      <button className={`${styles.actionButton} ${styles.commentButton}`} type="button" aria-label={`评论，当前 ${commentCount}`}>
+      <button className={styles.actionButton} type="button" aria-label={`评论，当前 ${commentCount}`}>
         <span className={styles.iconStack} aria-hidden="true">
           <img className={styles.defaultIcon} src={commentDefault} alt="" />
           <img className={styles.hoverIcon} src={commentHover} alt="" />
