@@ -21,6 +21,7 @@ body,
 body {
   min-height: 100vh;
   overflow-x: auto;
+  background: #171719;
 }
 
 button,
@@ -30,4 +31,10 @@ input {
 
 button {
   color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #98ccff;
+  outline-offset: 2px;
 }

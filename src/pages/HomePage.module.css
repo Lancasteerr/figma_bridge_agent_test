@@ -1,0 +1,41 @@
+.page {
+  width: 1440px;
+  height: 1668px;
+  margin: 0 auto;
+  padding-top: 34px;
+  background-color: #171719;
+  background-image: url('../assets/images/page-background.png');
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.headerWrap {
+  width: 1227px;
+  height: 90px;
+  margin-left: 107px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 225px 681px 287px;
+  align-items: start;
+  width: 1227px;
+  margin-top: 43px;
+  margin-left: 107px;
+  column-gap: 17px;
+}
+
+.centerColumn {
+  display: flex;
+  flex-direction: column;
+  width: 681px;
+  gap: 15px;
+}
+
+.hero {
+  display: block;
+  width: 681px;
+  height: 229px;
+  border-radius: 12px;
+}

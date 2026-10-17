@@ -1,4 +1,6 @@
-// 首批提交只提供可运行入口，页面组件将在下一批按 Figma 节点拆分实现。
+import { HomePage } from './pages/HomePage'
+
+// 根组件只负责承载当前唯一的社区主页，不引入设计稿未定义的路由。
 export default function App() {
-  return <main aria-label="Easy Community">Easy Community</main>
+  return <HomePage />
 }

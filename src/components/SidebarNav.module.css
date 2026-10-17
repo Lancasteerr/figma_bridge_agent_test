@@ -1,0 +1,72 @@
+.sidebar {
+  width: 225px;
+  height: 823px;
+  border-radius: 12px;
+  background: rgba(60, 60, 67, 0.3);
+  overflow: hidden;
+}
+
+.titleArea {
+  width: 225px;
+  height: 49px;
+  padding: 25px 0 0 16px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  height: 774px;
+  padding: 23px 14px 607px 16px;
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  flex: 0 0 48px;
+  align-items: center;
+  width: 195px;
+  height: 48px;
+  padding: 9px 121px 9px 0;
+  border: 0;
+  border-radius: 10px;
+  color: #757575;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navItem img {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  margin-left: 13px;
+}
+
+.navItem > span:last-child {
+  flex: 0 0 28px;
+  margin-left: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.selectionRail {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  display: none;
+  width: 3px;
+  height: 24px;
+  border-radius: 2px;
+  background: #98ccff;
+}
+
+.active {
+  color: #98ccff;
+  background: rgba(152, 204, 255, 0.15);
+}
+
+.active .selectionRail {
+  display: block;
+}
