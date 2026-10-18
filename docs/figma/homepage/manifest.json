@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 4,
+  "kind": "WORKUNIT_SOURCE",
+  "normalization": "COMPACT_V2",
+  "sessionId": "b8e003ba-b0c4-4fbe-a2ca-965d69f0a586",
+  "workUnitId": "workunit-105feac5b53dee0e",
+  "rootNodeId": "84:673",
+  "rootNodeName": "主页",
+  "page": {
+    "id": "0:1",
+    "name": "community"
+  },
+  "request": {
+    "rootNodeId": "84:673",
+    "depth": 15,
+    "maxNodes": 500,
+    "maxTextLength": 2000,
+    "factNodeIds": [],
+    "includePreview": false
+  },
+  "sourceFingerprint": "8ab6178ff135c7bb",
+  "nodeCount": 103,
+  "evidenceComplete": true,
+  "truncation": null,
+  "files": {
+    "outline": "outline.jsonl",
+    "facts": "facts.jsonl"
+  },
+  "createdAt": "2026-10-18T09:17:57.966Z"
+}

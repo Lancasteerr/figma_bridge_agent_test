@@ -1,0 +1,40 @@
+{"nodeId":"84:222","parentId":null,"depth":0,"order":0,"name":"文章列表卡片交互组件","type":"FRAME","navigationBoundsInParent":{"x":1504,"y":412,"width":700,"height":317},"layoutMode":"VERTICAL","childCount":4}
+{"nodeId":"84:223","parentId":"84:222","depth":1,"order":0,"name":"文章流交互组件标题","type":"TEXT","navigationBoundsInParent":{"x":29,"y":29,"width":258,"height":26},"childCount":0}
+{"nodeId":"84:224","parentId":"84:222","depth":1,"order":1,"name":"关注按钮状态","type":"FRAME","navigationBoundsInParent":{"x":29,"y":75,"width":642,"height":57},"layoutMode":"VERTICAL","childCount":2}
+{"nodeId":"84:225","parentId":"84:224","depth":2,"order":0,"name":"关注按钮状态说明","type":"TEXT","navigationBoundsInParent":{"x":0,"y":0,"width":278,"height":16},"childCount":0}
+{"nodeId":"84:226","parentId":"84:224","depth":2,"order":1,"name":"Follow states","type":"FRAME","navigationBoundsInParent":{"x":0,"y":26,"width":642,"height":31},"layoutMode":"HORIZONTAL","childCount":4}
+{"nodeId":"84:263","parentId":"84:226","depth":3,"order":0,"name":"Follow / Size=Detail / State=Default","type":"COMPONENT","navigationBoundsInParent":{"x":0,"y":0,"width":65,"height":31},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:228","parentId":"84:263","depth":4,"order":0,"name":"关注按钮背景","type":"RECTANGLE","navigationBoundsInParent":{"x":0,"y":0,"width":65,"height":31},"childCount":0}
+{"nodeId":"84:229","parentId":"84:263","depth":4,"order":1,"name":"+ 关注","type":"TEXT","navigationBoundsInParent":{"x":14,"y":8.5,"width":37,"height":14},"childCount":0}
+{"nodeId":"84:265","parentId":"84:226","depth":3,"order":1,"name":"Follow / Size=List / State=Default","type":"COMPONENT","navigationBoundsInParent":{"x":77,"y":1.5,"width":56,"height":28},"layoutMode":"HORIZONTAL","childCount":1}
+{"nodeId":"84:231","parentId":"84:265","depth":4,"order":0,"name":"Label","type":"TEXT","navigationBoundsInParent":{"x":11,"y":7,"width":34,"height":14},"childCount":0}
+{"nodeId":"84:267","parentId":"84:226","depth":3,"order":2,"name":"Follow / Size=List / State=Hover","type":"COMPONENT","navigationBoundsInParent":{"x":145,"y":1.5,"width":56,"height":28},"layoutMode":"HORIZONTAL","childCount":1}
+{"nodeId":"84:233","parentId":"84:267","depth":4,"order":0,"name":"Label","type":"TEXT","navigationBoundsInParent":{"x":11,"y":7,"width":34,"height":14},"childCount":0}
+{"nodeId":"84:269","parentId":"84:226","depth":3,"order":3,"name":"Follow / Size=List / State=Following","type":"COMPONENT","navigationBoundsInParent":{"x":213,"y":1.5,"width":56,"height":28},"layoutMode":"HORIZONTAL","childCount":1}
+{"nodeId":"84:235","parentId":"84:269","depth":4,"order":0,"name":"Label","type":"TEXT","navigationBoundsInParent":{"x":10,"y":7,"width":36,"height":14},"childCount":0}
+{"nodeId":"84:236","parentId":"84:222","depth":1,"order":2,"name":"点赞按钮状态","type":"FRAME","navigationBoundsInParent":{"x":29,"y":152,"width":642,"height":58},"layoutMode":"VERTICAL","childCount":2}
+{"nodeId":"84:237","parentId":"84:236","depth":2,"order":0,"name":"点赞按钮状态说明","type":"TEXT","navigationBoundsInParent":{"x":0,"y":0,"width":180,"height":16},"childCount":0}
+{"nodeId":"84:238","parentId":"84:236","depth":2,"order":1,"name":"Like states","type":"FRAME","navigationBoundsInParent":{"x":0,"y":26,"width":642,"height":32},"layoutMode":"HORIZONTAL","childCount":3}
+{"nodeId":"84:271","parentId":"84:238","depth":3,"order":0,"name":"Like / State=Default","type":"COMPONENT","navigationBoundsInParent":{"x":0,"y":0,"width":78,"height":32},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:240","parentId":"84:271","depth":4,"order":0,"name":"点赞","type":"INSTANCE","navigationBoundsInParent":{"x":14,"y":6,"width":20,"height":20},"layoutMode":"NONE","childCount":1}
+{"nodeId":"I84:240;7758:12389","parentId":"84:240","depth":5,"order":0,"name":"Icon","type":"VECTOR","navigationBoundsInParent":{"x":1.6666666269302368,"y":1.6666666269302368,"width":16.402206420898438,"height":16.666772842407227},"childCount":0}
+{"nodeId":"84:242","parentId":"84:271","depth":4,"order":1,"name":"Count","type":"TEXT","navigationBoundsInParent":{"x":40,"y":7.5,"width":24,"height":17},"childCount":0}
+{"nodeId":"84:273","parentId":"84:238","depth":3,"order":1,"name":"Like / State=Hover","type":"COMPONENT","navigationBoundsInParent":{"x":90,"y":0,"width":78,"height":32},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:244","parentId":"84:273","depth":4,"order":0,"name":"点赞","type":"INSTANCE","navigationBoundsInParent":{"x":14,"y":6,"width":20,"height":20},"layoutMode":"NONE","childCount":1}
+{"nodeId":"I84:244;7758:12389","parentId":"84:244","depth":5,"order":0,"name":"Icon","type":"VECTOR","navigationBoundsInParent":{"x":1.6666666269302368,"y":1.6666666269302368,"width":16.402206420898438,"height":16.666772842407227},"childCount":0}
+{"nodeId":"84:246","parentId":"84:273","depth":4,"order":1,"name":"Count","type":"TEXT","navigationBoundsInParent":{"x":40,"y":7.5,"width":24,"height":17},"childCount":0}
+{"nodeId":"84:275","parentId":"84:238","depth":3,"order":2,"name":"Like / State=Liked","type":"COMPONENT","navigationBoundsInParent":{"x":180,"y":0,"width":78,"height":32},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:248","parentId":"84:275","depth":4,"order":0,"name":"点赞","type":"INSTANCE","navigationBoundsInParent":{"x":8.5,"y":6,"width":20,"height":20},"layoutMode":"NONE","childCount":1}
+{"nodeId":"I84:248;7758:12389","parentId":"84:248","depth":5,"order":0,"name":"Icon","type":"VECTOR","navigationBoundsInParent":{"x":1.6666666269302368,"y":1.6666666269302368,"width":16.402206420898438,"height":16.666772842407227},"childCount":0}
+{"nodeId":"84:250","parentId":"84:275","depth":4,"order":1,"name":"Count","type":"TEXT","navigationBoundsInParent":{"x":34.5,"y":7.5,"width":35,"height":17},"childCount":0}
+{"nodeId":"84:251","parentId":"84:222","depth":1,"order":3,"name":"评论按钮状态","type":"FRAME","navigationBoundsInParent":{"x":29,"y":230,"width":642,"height":58},"layoutMode":"VERTICAL","childCount":2}
+{"nodeId":"84:252","parentId":"84:251","depth":2,"order":0,"name":"评论按钮状态说明","type":"TEXT","navigationBoundsInParent":{"x":0,"y":0,"width":136,"height":16},"childCount":0}
+{"nodeId":"84:253","parentId":"84:251","depth":2,"order":1,"name":"Comment states","type":"FRAME","navigationBoundsInParent":{"x":0,"y":26,"width":642,"height":32},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:277","parentId":"84:253","depth":3,"order":0,"name":"Comment / State=Default","type":"COMPONENT","navigationBoundsInParent":{"x":0,"y":0,"width":78,"height":32},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:255","parentId":"84:277","depth":4,"order":0,"name":"评论","type":"INSTANCE","navigationBoundsInParent":{"x":18,"y":6,"width":20,"height":20},"layoutMode":"NONE","childCount":1}
+{"nodeId":"I84:255;58031:80728","parentId":"84:255","depth":5,"order":0,"name":"icon","type":"VECTOR","navigationBoundsInParent":{"x":1.6666665077209473,"y":1.6666665077209473,"width":16.66666603088379,"height":16.66666603088379},"childCount":0}
+{"nodeId":"84:257","parentId":"84:277","depth":4,"order":1,"name":"Count","type":"TEXT","navigationBoundsInParent":{"x":44,"y":7.5,"width":16,"height":17},"childCount":0}
+{"nodeId":"84:279","parentId":"84:253","depth":3,"order":1,"name":"Comment / State=Hover","type":"COMPONENT","navigationBoundsInParent":{"x":90,"y":0,"width":78,"height":32},"layoutMode":"HORIZONTAL","childCount":2}
+{"nodeId":"84:259","parentId":"84:279","depth":4,"order":0,"name":"评论","type":"INSTANCE","navigationBoundsInParent":{"x":18,"y":6,"width":20,"height":20},"layoutMode":"NONE","childCount":1}
+{"nodeId":"I84:259;58031:80728","parentId":"84:259","depth":5,"order":0,"name":"icon","type":"VECTOR","navigationBoundsInParent":{"x":1.6666665077209473,"y":1.6666665077209473,"width":16.66666603088379,"height":16.66666603088379},"childCount":0}
+{"nodeId":"84:261","parentId":"84:279","depth":4,"order":1,"name":"Count","type":"TEXT","navigationBoundsInParent":{"x":44,"y":7.5,"width":16,"height":17},"childCount":0}

@@ -1,0 +1,14 @@
+/* 使用本地可变字体，避免系统回退字体改变设计中的文字度量。 */
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('/fonts/noto-sans-sc.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background: #161618;
+  font-family: 'Noto Sans SC', sans-serif;
+}

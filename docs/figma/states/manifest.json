@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 4,
+  "kind": "WORKUNIT_SOURCE",
+  "normalization": "COMPACT_V2",
+  "sessionId": "b8e003ba-b0c4-4fbe-a2ca-965d69f0a586",
+  "workUnitId": "workunit-7ba200f4b0c3ae13",
+  "rootNodeId": "84:222",
+  "rootNodeName": "文章列表卡片交互组件",
+  "page": {
+    "id": "0:1",
+    "name": "community"
+  },
+  "request": {
+    "rootNodeId": "84:222",
+    "depth": 10,
+    "maxNodes": 120,
+    "maxTextLength": 2000,
+    "factNodeIds": [],
+    "includePreview": false
+  },
+  "sourceFingerprint": "aea2df8d416e40a9",
+  "nodeCount": 40,
+  "evidenceComplete": true,
+  "truncation": null,
+  "files": {
+    "outline": "outline.jsonl",
+    "facts": "facts.jsonl"
+  },
+  "createdAt": "2026-10-18T09:17:57.966Z"
+}
