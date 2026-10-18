@@ -6,9 +6,241 @@
   font-display: block;
 }
 
-body {
-  margin: 0;
-  color: white;
-  background: #161618;
+/* 色值保留 Figma 浮点分量，避免把半透明面板变成不透明近似色。 */
+:root {
   font-family: 'Noto Sans SC', sans-serif;
+  color: #fff;
+  background: #161618;
+  font-synthesis: none;
+  --accent: rgb(59.8% 79.9% 100%);
+  --icon-accent: rgb(59.803188% 79.901594% 100%);
+  --muted: #757575;
+  --icon-muted: rgb(38.942307% 38.942307% 38.942307%);
+  --panel: rgb(60 60 67 / 30%);
 }
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+img { display: block; }
+h1, h2, p { margin: 0; }
+
+/* 1440px 设计画布在宽屏居中、窄屏自然溢出；背景与画布宽度独立。 */
+.community-page {
+  position: relative;
+  isolation: isolate;
+  min-width: 1440px;
+  min-height: 1668px;
+  padding: 34px 0;
+}
+.page-background {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background: #161618 url('/assets/background.png') center / cover no-repeat;
+  pointer-events: none;
+}
+.panel { background: var(--panel); border-radius: 12px; }
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  background: currentColor;
+  mask: var(--icon-url) center / contain no-repeat;
+}
+
+/* 顶栏使用纵向 sticky，保留文档的横向滚动，不脱离横向布局。 */
+.site-header {
+  position: sticky;
+  top: 34px;
+  z-index: 3;
+  width: 1227px;
+  height: 90px;
+  margin-inline: auto;
+  padding-left: 33px;
+  display: flex;
+  align-items: center;
+}
+.header-inner { display: flex; align-items: center; gap: 321px; height: 61px; }
+.header-inner h1 {
+  width: 266px;
+  height: 38px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  white-space: nowrap;
+}
+.header-tools { display: flex; align-items: center; gap: 56px; height: 61px; }
+.search-wrapper { width: 413px; height: 61px; padding: 10px; }
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 393px;
+  height: 41px;
+  padding: 12px 16px;
+  border-radius: 9999px;
+  background: rgb(60 60 67 / 60%);
+  color: var(--muted);
+}
+.search-form input {
+  width: 337px;
+  height: 17px;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+}
+.search-form input::placeholder { color: var(--muted); opacity: 1; }
+.search-form button { display: flex; width: 16px; height: 16px; }
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.publish-center, .profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #d9d9d9;
+  box-shadow: inset 0 0 0 1px #d9d9d9;
+}
+.profile-button { position: relative; }
+.profile-button img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.profile-button::after { content: ''; position: absolute; inset: 0; border: 1px solid #d9d9d9; border-radius: 50%; }
+
+/* 三栏尺寸和起点来自工作单元；侧栏驻留行为来自已确认的交互约定。 */
+.community-layout {
+  display: grid;
+  grid-template-columns: 225px 681px 287px;
+  gap: 17px;
+  align-items: start;
+  width: 1227px;
+  margin: 43px auto 0;
+}
+.sidebar, .publish-card { position: sticky; top: 167px; }
+.sidebar { height: calc(100vh - 202px); min-height: 232px; }
+.sidebar-heading { height: 49px; padding: 25px 16px 0; }
+.section-title {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  width: max-content;
+  height: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.section-title-english { font-size: 14px; line-height: 17px; color: var(--muted); }
+.sidebar .section-title-english { font-weight: 400; }
+.sidebar .section-title { width: 80px; }
+.publish-card .section-title { width: 111px; }
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -1px;
+  right: -1px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--icon-accent);
+}
+.category-list { padding: 23px 14px 0 16px; }
+.category-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 195px;
+  height: 48px;
+  padding-left: 13px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+}
+.category-button[aria-pressed='true'] { background: rgb(59.803188% 79.901594% 100% / 15%); color: var(--icon-accent); }
+.category-button[aria-pressed='true']::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 14px;
+  width: 2px;
+  height: 20px;
+  border-radius: 1px;
+  background: var(--icon-accent);
+}
+.publish-card { height: 182px; }
+.publish-heading { height: 69px; padding: 17px 16px 0; }
+.publish-actions { display: flex; gap: 33px; padding-left: 33px; }
+.publish-actions button { display: flex; flex-direction: column; align-items: center; height: 65px; }
+.publish-actions button:first-child { width: 48px; }
+.publish-actions button:last-child { width: 56px; }
+.publish-actions span:not(.icon) { color: var(--icon-muted); font-size: 14px; line-height: 17px; white-space: nowrap; }
+
+/* FILL 使用居中 cover；封面图片实际宽 633，父级按事实裁切至 631。 */
+.content-column { width: 681px; }
+.hero-banner { width: 681px; height: 229px; object-fit: cover; object-position: center; border-radius: 12px; }
+.article-feed {
+  margin-top: 15px;
+  padding: 1px;
+  border-radius: 12px;
+  background: rgb(14.5% 14.5% 16.5%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 6%);
+  overflow: hidden;
+}
+.article-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 679px;
+  height: 610px;
+  padding: 20px 24px;
+}
+.author-row { display: flex; justify-content: space-between; align-items: center; width: 631px; height: 36px; flex-shrink: 0; }
+.author-info { display: flex; align-items: center; gap: 10px; width: 520px; height: 36px; }
+.author-avatar { border-radius: 50%; object-fit: cover; outline: 1px solid var(--icon-muted); }
+.author-text { display: flex; flex-direction: column; justify-content: center; gap: 1px; width: 474px; height: 36px; overflow: hidden; }
+.author-name { height: 18px; font-size: 14px; font-weight: 500; line-height: 22px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.article-metadata { height: 16px; color: var(--muted); font-size: 12px; line-height: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.follow-button {
+  flex-shrink: 0;
+  width: 56px;
+  height: 28px;
+  border-radius: 8px;
+  color: rgb(5% 5% 6%);
+  background: var(--accent);
+  font-size: 12px;
+  line-height: 14px;
+}
+.follow-button:hover:not([aria-pressed='true']) { background: rgb(72% 87% 100%); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 22%); }
+.follow-button[aria-pressed='true'] { color: var(--accent); background: rgb(59.8% 79.9% 100% / 12%); box-shadow: inset 0 0 0 1px rgb(59.8% 79.9% 100% / 55%); }
+.article-content { width: 631px; height: 104px; flex-shrink: 0; overflow: hidden; }
+.article-title, .article-title button { width: 633px; height: 52px; font-size: 20px; font-weight: 700; line-height: 26px; text-align: left; }
+.article-title button { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.article-summary { margin-top: 8px; width: 633px; height: 44px; font-size: 14px; line-height: 22px; color: var(--muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.article-cover { display: block; width: 631px; height: 356px; flex-shrink: 0; overflow: hidden; border-radius: 8px; background: rgb(12% 12% 14%); }
+.cover-image { width: 633px; height: 356px; object-fit: cover; }
+.cover-left { border-radius: 12px 0 0 12px; }
+.cover-right { border-radius: 0 12px 12px 0; }
+.article-interactions { display: flex; align-items: center; gap: 12px; width: 631px; height: 32px; flex-shrink: 0; }
+.interaction-button { display: flex; align-items: center; justify-content: center; gap: 6px; width: 78px; height: 32px; border-radius: 8px; font-size: 14px; line-height: 17px; color: var(--muted); }
+.interaction-button .icon { color: var(--icon-muted); }
+.interaction-button:hover { background: rgb(59.8% 79.9% 100% / 8%); color: var(--accent); }
+.interaction-button[aria-pressed='true'] { background: rgb(59.8% 79.9% 100% / 16%); box-shadow: inset 0 0 0 1px rgb(59.8% 79.9% 100% / 40%); color: var(--accent); }
+.interaction-button[aria-pressed='true'] .icon { color: var(--icon-accent); }
+.article-divider { height: 1px; margin-inline: 24px; background: rgb(255 255 255 / 8%); }
