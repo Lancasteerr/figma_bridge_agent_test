@@ -1,0 +1,66 @@
+{
+  "sourceFingerprint": "aea2df8d416e40a9",
+  "fidelityPolicy": "EXACT",
+  "state": "COMPLETE",
+  "targetFiles": [
+    "src/styles.css"
+  ],
+  "mappings": {
+    "84:265": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".follow-button"
+      }
+    ],
+    "84:267": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".follow-button:hover:not([aria-pressed='true'])"
+      }
+    ],
+    "84:269": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".follow-button[aria-pressed='true']"
+      }
+    ],
+    "84:271": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".interaction-button"
+      }
+    ],
+    "84:273": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".interaction-button:hover"
+      }
+    ],
+    "84:275": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".interaction-button[aria-pressed='true']"
+      }
+    ],
+    "84:277": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".interaction-button"
+      }
+    ],
+    "84:279": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".interaction-button:hover"
+      }
+    ]
+  },
+  "assumptions": [
+    "交互由用户确认：导航与侧栏驻留，中间文档滚动；窄屏允许横向滚动，宽屏背景独立固定覆盖窗口。",
+    "只有主页渲染，右侧组件样例只作为状态参考。",
+    "12.8k 的本地演示计数基数为 12800；状态刷新重置。",
+    "AUTO 行高按插件文本盒高度及行数设置；显式 PIXELS 行高原样保留。",
+    "遵照用户明确要求，仅以插件事实、浏览器几何和计算样式验收，不进行截图比较。"
+  ],
+  "unresolvedDifferences": []
+}

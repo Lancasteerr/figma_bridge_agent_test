@@ -1,0 +1,303 @@
+{
+  "sourceFingerprint": "8ab6178ff135c7bb",
+  "fidelityPolicy": "EXACT",
+  "state": "COMPLETE",
+  "targetFiles": [
+    "public/assets/avatar.jpg",
+    "public/assets/background.png",
+    "public/assets/banner.png",
+    "public/assets/comment.svg",
+    "public/assets/compass.svg",
+    "public/assets/cover-city.png",
+    "public/assets/cover-clouds.png",
+    "public/assets/edit-small.svg",
+    "public/assets/edit.svg",
+    "public/assets/inbox.svg",
+    "public/assets/like.svg",
+    "public/assets/search.svg",
+    "public/assets/terminal.svg",
+    "public/assets/trending.svg",
+    "public/fonts/noto-sans-sc.woff2",
+    "src/App.tsx",
+    "src/components/ArticleItem.tsx",
+    "src/components/Header.tsx",
+    "src/components/Icon.tsx",
+    "src/components/PublishCard.tsx",
+    "src/components/SectionTitle.tsx",
+    "src/components/Sidebar.tsx",
+    "src/components/Toast.tsx",
+    "src/data/community.ts",
+    "src/hooks/useToast.ts",
+    "src/styles.css"
+  ],
+  "mappings": {
+    "84:673": [
+      {
+        "path": "src/App.tsx",
+        "symbolOrSelector": "App"
+      },
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".community-page"
+      },
+      {
+        "path": "public/assets/background.png",
+        "symbolOrSelector": "RAW FILLS[0]"
+      }
+    ],
+    "84:674": [
+      {
+        "path": "src/components/Sidebar.tsx",
+        "symbolOrSelector": "Sidebar"
+      }
+    ],
+    "84:675": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".sidebar-heading"
+      }
+    ],
+    "84:676": [
+      {
+        "path": "src/components/SectionTitle.tsx",
+        "symbolOrSelector": "SectionTitle"
+      }
+    ],
+    "84:679": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".section-title::after"
+      }
+    ],
+    "84:680": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".category-list"
+      }
+    ],
+    "84:681": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".category-button[aria-pressed='true']"
+      }
+    ],
+    "84:682": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".category-button[aria-pressed='true']::before"
+      }
+    ],
+    "84:684": [
+      {
+        "path": "public/assets/terminal.svg",
+        "symbolOrSelector": "SVG root 30x30"
+      }
+    ],
+    "84:688": [
+      {
+        "path": "public/assets/trending.svg",
+        "symbolOrSelector": "SVG root 30x30"
+      }
+    ],
+    "84:692": [
+      {
+        "path": "public/assets/compass.svg",
+        "symbolOrSelector": "SVG root 30x30"
+      }
+    ],
+    "84:694": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".hero-banner"
+      },
+      {
+        "path": "public/assets/banner.png",
+        "symbolOrSelector": "RAW FILLS[0]"
+      }
+    ],
+    "84:695": [
+      {
+        "path": "src/components/Header.tsx",
+        "symbolOrSelector": "Header"
+      }
+    ],
+    "I84:695;8:22": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".header-inner"
+      }
+    ],
+    "I84:695;8:11": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".header-inner h1"
+      }
+    ],
+    "I84:695;6:85": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".search-form"
+      }
+    ],
+    "I84:695;6:85;2236:15005": [
+      {
+        "path": "public/assets/search.svg",
+        "symbolOrSelector": "SVG root 16x16"
+      }
+    ],
+    "I84:695;6:136": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".publish-center"
+      }
+    ],
+    "I84:695;6:98": [
+      {
+        "path": "public/assets/edit-small.svg",
+        "symbolOrSelector": "SVG root 25x25"
+      }
+    ],
+    "I84:695;6:94": [
+      {
+        "path": "public/assets/avatar.jpg",
+        "symbolOrSelector": "RAW FILLS[0]"
+      },
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".profile-button"
+      }
+    ],
+    "84:696": [
+      {
+        "path": "src/components/PublishCard.tsx",
+        "symbolOrSelector": "PublishCard"
+      }
+    ],
+    "84:698": [
+      {
+        "path": "src/components/SectionTitle.tsx",
+        "symbolOrSelector": "SectionTitle"
+      }
+    ],
+    "84:702": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".publish-actions"
+      }
+    ],
+    "84:704": [
+      {
+        "path": "public/assets/edit.svg",
+        "symbolOrSelector": "SVG root 48x48"
+      }
+    ],
+    "84:707": [
+      {
+        "path": "public/assets/inbox.svg",
+        "symbolOrSelector": "SVG root 48x48"
+      }
+    ],
+    "84:709": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".article-feed"
+      }
+    ],
+    "84:710": [
+      {
+        "path": "src/components/ArticleItem.tsx",
+        "symbolOrSelector": "ArticleItem"
+      },
+      {
+        "path": "src/data/community.ts",
+        "symbolOrSelector": "initialArticles[0]"
+      }
+    ],
+    "I84:710;84:520": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".author-row"
+      }
+    ],
+    "I84:710;84:526": [
+      {
+        "path": "src/components/ArticleItem.tsx",
+        "symbolOrSelector": "FollowButton"
+      }
+    ],
+    "I84:710;84:528": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".article-content"
+      }
+    ],
+    "I84:710;84:531": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".article-cover"
+      }
+    ],
+    "I84:710;84:532": [
+      {
+        "path": "public/assets/cover-city.png",
+        "symbolOrSelector": "RAW FILLS[0]"
+      },
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".cover-left"
+      }
+    ],
+    "I84:710;84:534": [
+      {
+        "path": "src/components/ArticleItem.tsx",
+        "symbolOrSelector": "InteractionButton"
+      }
+    ],
+    "I84:710;84:534;84:240": [
+      {
+        "path": "public/assets/like.svg",
+        "symbolOrSelector": "SVG root 20x20"
+      }
+    ],
+    "I84:710;84:538;84:255": [
+      {
+        "path": "public/assets/comment.svg",
+        "symbolOrSelector": "SVG root 20x20"
+      }
+    ],
+    "84:711": [
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".article-divider"
+      }
+    ],
+    "84:713": [
+      {
+        "path": "src/components/ArticleItem.tsx",
+        "symbolOrSelector": "ArticleItem"
+      },
+      {
+        "path": "src/data/community.ts",
+        "symbolOrSelector": "initialArticles[1]"
+      }
+    ],
+    "I84:713;84:557": [
+      {
+        "path": "public/assets/cover-clouds.png",
+        "symbolOrSelector": "RAW FILLS[0]"
+      },
+      {
+        "path": "src/styles.css",
+        "symbolOrSelector": ".cover-right"
+      }
+    ]
+  },
+  "assumptions": [
+    "交互由用户确认：导航与侧栏驻留，中间文档滚动；窄屏允许横向滚动，宽屏背景独立固定覆盖窗口。",
+    "只有主页渲染，右侧组件样例只作为状态参考。",
+    "12.8k 的本地演示计数基数为 12800；状态刷新重置。",
+    "AUTO 行高按插件文本盒高度及行数设置；显式 PIXELS 行高原样保留。",
+    "遵照用户明确要求，仅以插件事实、浏览器几何和计算样式验收，不进行截图比较。"
+  ],
+  "unresolvedDifferences": []
+}
