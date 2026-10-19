@@ -4,7 +4,7 @@
   <a href="./README.md">中文</a> · <strong>English</strong>
 </p>
 
-This Figma-to-code project uses [figma-local-agent](plugin://figma-local-agent@figma-bridge-marketplace) to turn a Figma design into a React page. The agent reads the selected design scope's structure, layout, styles, text, assets, and visible states to implement the **Easy Community** desktop homepage with React, TypeScript, and Vite.
+This Figma-to-code project uses [figma-local-agent](https://github.com/Lancasteerr/figma_bridge_agent) to turn a Figma design into a React page. The agent reads the selected design scope's structure, layout, styles, text, assets, and visible states to implement the **Easy Community** desktop homepage with React, TypeScript, and Vite.
 
 The project focuses on design reproduction, reusable components, and lightweight frontend interactions. It does not include a backend service.
 

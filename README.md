@@ -4,7 +4,7 @@
   <strong>中文</strong> · <a href="./README.en-US.md">English</a>
 </p>
 
-这是一个使用 [figma-local-agent](plugin://figma-local-agent@figma-bridge-marketplace) 将 Figma 设计稿落地为 React 页面的实践项目。Agent 读取选中设计范围的结构、布局、样式、文字、素材与可见状态，使用 React、TypeScript 和 Vite 实现 **Easy Community** 桌面端社区首页。
+这是一个使用 [figma-local-agent](https://github.com/Lancasteerr/figma_bridge_agent) 将 Figma 设计稿落地为 React 页面的实践项目。Agent 读取选中设计范围的结构、布局、样式、文字、素材与可见状态，使用 React、TypeScript 和 Vite 实现 **Easy Community** 桌面端社区首页。
 
 项目侧重设计还原、可复用组件与轻量前端交互，不包含后端服务。
 
